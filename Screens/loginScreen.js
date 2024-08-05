@@ -1,5 +1,5 @@
 import react from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity,} from 'react-native';
 
 const Login= () => {
     return (
@@ -33,25 +33,21 @@ const styles = StyleSheet.create({
     text: {
         color: 'orange',
         fontSize: 40,
-        fontFamily: 'courier',
         margin: 5,
     },
     text1: {
         color: 'orange',
         fontSize: 40,
-        fontFamily: 'courier',
         padding: 45,
     },
     text2: {
         color: 'orange',
         fontSize: 18,
-        fontFamily: 'courier',
         margin: 10,
     },
     text3: {
         color: 'orange',
         fontSize: 18,
-        fontFamily: 'courier',
         width: 300,
     },
     input: {
@@ -64,7 +60,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderColor: 'white',
         borderWidth: 2,
-        fontFamily: 'courier',
     },
     buttonContainer: {
         backgroundColor: "black",
@@ -76,6 +71,5 @@ const styles = StyleSheet.create({
         borderColor: 'white',
         borderRadius: '20px',
         color: 'grey',
-        fontFamily: 'courier',
     },
 });
