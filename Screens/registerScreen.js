@@ -1,14 +1,18 @@
-import react from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
-import { Divider } from 'react-native-elements';
+
 
 const Register = () => {
   return (
-    
-    <View style={styles.container}>
-      <Text style={styles.text}>CTN</Text>
-      <Divider style={styles.divider}/>
-    </View>
+  <View>
+    <Text style={styles.logo}>CTN</Text>
+    <Text style={styles.inputs}>Ingrese sus datos para registrarse</Text>
+    <TextInput style={styles.inputs} placeholder="Nombre completo:"/>
+    <TextInput style= {styles.inputs}placeholder="example@gmail.com:"/>
+    <TextInput style={styles.inputs} placeholder="password:" secureTextEntry={true}/>
+    <TextInput style={styles.inputs}placeholder="confirm password:"secureTextEntry={true}/>
+    <Text style={styles.boton}>Crear cuenta</Text>
+  </View>
   );
 }
 export default Register;
@@ -19,18 +23,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#10152f',
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
-  text: {
-    color: 'white',
-    fontSize: 65,
-    backgroundColor: '#384358',
-    width: 2000,
-    padding: 35,
-    top: -195,
-    textAlign: 'center',
+  logo: {
+    fontSize: 100,
+    marginLeft: 570,
   },
-  divider: {
-    Color: '#8d0c1b',
+  inputs: {
+    marginLeft: 570,
+    padding: 13,
+    marginTop: 8,
+    width: 200,
+    fontSize: 20,
+    borderColor: 'black',
+  },
+  boton: {
+    marginLeft: 595,
+    padding: 8,
+    marginTop: 8,
+    width: 200,
+    fontSize: 20,
   },
 });

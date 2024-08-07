@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button} from 'react-native';
 import { Divider } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -46,6 +46,8 @@ const principal= () => {
         </View>
 
         <View style={styles.body}>
+        
+             
         <Text style={styles.Textbody}>PROXIMAMENTE</Text>
 
         </View>
@@ -99,9 +101,7 @@ const styles = StyleSheet.create({
         
 
     },
-    divider1:{
-      
-    }
+   
 
  
 });
