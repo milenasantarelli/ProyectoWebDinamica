@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, ScrollView} from 'react-native';
 import { Divider } from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
-const principal= () => {
+
+const PrincipalScreen= () => {
+    const navigation = useNavigation();
     return (
         <ScrollView style={styles.container}>
          <View style={styles.header}>
@@ -14,7 +16,8 @@ const principal= () => {
         <Button
         color="#384358"
          style={styles.btn}
-        title='boton1'
+        title='registro'
+      
         />
         <Divider
         style={styles.divider}
@@ -23,6 +26,9 @@ const principal= () => {
         color="#384358"
          style={styles.btn}
         title='boton2'
+        onPress={() =>
+            navigation.navigate ('Acceso')
+    }
         />
          <Divider
          style={styles.divider}
@@ -61,7 +67,7 @@ const principal= () => {
     
     );
 }
-export default principal;
+export default PrincipalScreen;
 
 const styles = StyleSheet.create({
     container: {

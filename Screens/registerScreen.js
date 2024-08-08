@@ -1,21 +1,36 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 
-const Register = () => {
+const RegisterScreen = () => {
+  const navigation = useNavigation();
   return (
   <View>
-    <Text style={styles.logo}>CTN</Text>
-    <Text style={styles.inputs}>Ingrese sus datos para registrarse</Text>
-    <TextInput style={styles.inputs} placeholder="Nombre completo:"/>
-    <TextInput style= {styles.inputs}placeholder="example@gmail.com:"/>
-    <TextInput style={styles.inputs} placeholder="password:" secureTextEntry={true}/>
-    <TextInput style={styles.inputs}placeholder="confirm password:"secureTextEntry={true}/>
-    <Text style={styles.boton}>Crear cuenta</Text>
+  <Text style={styles.logo}>CTN</Text>
+  <View style={styles.cont}>
+    <Text style={styles.input2}>Ingrese sus datos para registrarse</Text>
+    <Text style={styles.textos}>Nombre completo :</Text>
+    <TextInput style={styles.inputs}/>
+    <Text style={styles.textos}>Correo :</Text>
+    <TextInput style= {styles.inputs}/>
+    <Text style={styles.textos}>Contraseña :</Text>
+    <TextInput style={styles.inputs} secureTextEntry={true}/>
+    <Text style={styles.textos}>Confirmar contraseña :</Text>
+    <TextInput style={styles.inputs}secureTextEntry={true}/>
+  </View>
+    <Button
+        color="#384358"
+         style={styles.btn}
+        title='crear cuenta'
+        onPress={ () =>
+            navigation.navigate('Principal')
+        }
+        />
   </View>
   );
 }
-export default Register;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -24,23 +39,39 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  cont :{
+    backgroundColor: 'grey',
+    padding: 10,
+  },
   logo: {
-    fontSize: 100,
+    fontSize: 80,
     marginLeft: 570,
+    margin: 8,
   },
   inputs: {
-    marginLeft: 570,
+    marginLeft: 520,
     padding: 13,
     marginTop: 8,
-    width: 200,
-    fontSize: 20,
-    borderColor: 'black',
+    width: 275,
+    fontSize: 10,
+    height: 10,
   },
-  boton: {
+  btn: {
     marginLeft: 595,
     padding: 8,
-    marginTop: 8,
+    margin: 10,
     width: 200,
     fontSize: 20,
+  },
+  input2: {
+    fontSize: 30,
+    marginLeft: 555,
+    width: 270,
+    marginBottom: 15,
+  },
+  textos: {
+    marginLeft: 520,
+    margin: 3,
+    fontSize: 18,
   },
 });
